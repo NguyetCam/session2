@@ -64,7 +64,7 @@ public class fraction {
     }
     int BCNN(int a,int b){
         int ucln = UCLN(a,b);
-        if(a==b) return a;
+        if(Math.abs(a)==Math.abs(b)) return a;
         return ucln*a*b;
     }
     void rutgon(int a,int b){
@@ -79,7 +79,13 @@ public class fraction {
                 ms=Math.abs(ms);
                 System.out.println("Rút gọn: " + ts + "/" + ms);
             }
-            System.out.println("Rút gọn: " + ts + "/" + ms);
+            else if(ts>0&&ms<0){
+                ts=ts*(-1);
+                ms=Math.abs(ms);
+                System.out.println("Rút gọn: " + ts + "/" + ms);
+            } else {
+                System.out.println("Rút gọn: " + ts + "/" + ms);
+            }
         }
     }
     void nghichdao(){
@@ -111,6 +117,7 @@ public class fraction {
         ts = a*x + c*y;
         ms = bcnn;
         System.out.println("Tổng hai phân số: " + getA() + "/" + getB() + " + " + getC() + "/" + getD() + " = " + ts + "/" + ms);
+        rutgon(ts,ms);
     }
     void sub(int a, int b, int c, int d){
         int x,y,ts,ms;
@@ -120,6 +127,7 @@ public class fraction {
         ts = a*x - c*y;
         ms = bcnn;
         System.out.println("Hiệu hai phân số: " + getA() + "/" + getB() + " - " + getC() + "/" + getD() + " = " + ts + "/" + ms);
+        rutgon(ts,ms);
     }
     void multi(int a, int b, int c, int d){
         int ts,ms;
