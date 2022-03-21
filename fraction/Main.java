@@ -14,7 +14,7 @@ public class Main {
             System.out.println("Mẫu số: " + fr.getB());
             System.out.println("Phân số: " + fr.getA() + "/" +fr.getB());
             fr.rutgon(fr.getA(), fr.getB());
-            fr.nghichdao();
+            fr.nghichdao(fr.getA(),fr.getB());
             fr.pso2();
         }
     }
