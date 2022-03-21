@@ -138,7 +138,7 @@ public class fraction {
     }
     void div(int a, int b, int c, int d){
         int ts,ms;
-        if(getC()==0) System.out.println("Số bị chia phải khác 0");
+        if(c==0) System.out.println("Số bị chia phải khác 0");
         else {
             ts = a*d;
             ms = b*c;
