@@ -48,7 +48,7 @@ public class fraction {
     int UCLN(int a,int b){
         int i;
         if(a==0) return b;
-        if(a==b) return b;
+        if(Math.abs(a)==Math.abs(b)) return b;
         else {
             if(Math.abs(a)>Math.abs(b)){
                 for(i=Math.abs(b);i>=1;i--){
