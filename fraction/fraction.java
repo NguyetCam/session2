@@ -88,12 +88,12 @@ public class fraction {
             }
         }
     }
-    void nghichdao(){
-        if(getA()==0){
+    void nghichdao(int a,int b){
+        if(a==0){
             System.out.println("Phân số không thể nghịch đảo vì tử số cần khác 0");
         }else {
-            System.out.println("Phân số nghịch đảo: " + getB() + "/" + getA());
-            rutgon(getB(),getA());
+            System.out.println("Phân số nghịch đảo: " + b + "/" + a);
+            rutgon(b,a);
         }
     }
     void pso2(){
