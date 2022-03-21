@@ -106,7 +106,6 @@ public class fraction {
     void add(int a, int b, int c, int d){
         int x,y,ts,ms;
         int bcnn = BCNN(b,d);
-        System.out.println(bcnn);
         x = bcnn/b;
         y = bcnn/d;
         ts = a*x + c*y;
