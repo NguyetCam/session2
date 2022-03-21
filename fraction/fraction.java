@@ -72,6 +72,7 @@ public class fraction {
         int ms=b/ucln;
         if(ts==0) System.out.println("Phân số rút gọn: 0");
         if(ms==1) System.out.println("Rút gọn: " + ts);
+        if(ms==-1) System.out.println("Rút gọn: " + ts*(-1));
         else {
             if(ts<0&&ms<0){
                 ts=Math.abs(ts);
