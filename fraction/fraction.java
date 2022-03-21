@@ -65,7 +65,7 @@ public class fraction {
     int BCNN(int a,int b){
         int ucln = UCLN(a,b);
         if(Math.abs(a)==Math.abs(b)) return Math.abs(a);
-        return ucln*a*b;
+        return (a*b)/ucln;
     }
     void rutgon(int a,int b){
         int ucln = UCLN(a,b);
@@ -79,7 +79,7 @@ public class fraction {
                 ms=Math.abs(ms);
                 System.out.println("Rút gọn: " + ts + "/" + ms);
             }
-            else if(ts>0&&ms<0){
+            if(ts>0&&ms<0){
                 ts=ts*(-1);
                 ms=Math.abs(ms);
                 System.out.println("Rút gọn: " + ts + "/" + ms);
@@ -116,7 +116,7 @@ public class fraction {
         y = bcnn/d;
         ts = a*x + c*y;
         ms = bcnn;
-        System.out.println("Tổng hai phân số: " + getA() + "/" + getB() + " + " + getC() + "/" + getD() + " = " + ts + "/" + ms);
+        System.out.println("Tổng hai phân số: " + a + "/" + b + " + " + c + "/" + d + " = " + ts + "/" + ms);
         rutgon(ts,ms);
     }
     void sub(int a, int b, int c, int d){
@@ -126,14 +126,14 @@ public class fraction {
         y = bcnn/d;
         ts = a*x - c*y;
         ms = bcnn;
-        System.out.println("Hiệu hai phân số: " + getA() + "/" + getB() + " - " + getC() + "/" + getD() + " = " + ts + "/" + ms);
+        System.out.println("Hiệu hai phân số: " + a + "/" + b + " - " + c + "/" + d + " = " + ts + "/" + ms);
         rutgon(ts,ms);
     }
     void multi(int a, int b, int c, int d){
         int ts,ms;
         ts = a*c;
         ms = b*d;
-        System.out.println("Tích hai phân số: " + getA() + "/" + getB() + " * " + getC() + "/" + getD() + " = " + ts + "/" + ms);
+        System.out.println("Tích hai phân số: " + a + "/" + b + " * " + c + "/" + d + " = " + ts + "/" + ms);
         rutgon(ts,ms);
     }
     void div(int a, int b, int c, int d){
@@ -142,7 +142,7 @@ public class fraction {
         else {
             ts = a*d;
             ms = b*c;
-            System.out.println("Thương hai phân số: " + getA() + "/" + getB() + " / " + getC() + "/" + getD() + " = " + ts + "/" + ms);
+            System.out.println("Thương hai phân số: " + a + "/" + b + " / " + c + "/" + d + " = " + ts + "/" + ms);
             rutgon(ts,ms);
         }
     }
