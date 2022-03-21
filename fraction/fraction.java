@@ -64,7 +64,6 @@ public class fraction {
     }
     int BCNN(int a,int b){
         int ucln = UCLN(a,b);
-        if(Math.abs(a)==Math.abs(b)) return Math.abs(a);
         return (a*b)/ucln;
     }
     void rutgon(int a,int b){
