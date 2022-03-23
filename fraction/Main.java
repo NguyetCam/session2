@@ -8,17 +8,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         fr.setA(sc.nextInt());
         fr.setB(sc.nextInt());
-        if(fr.kiemtra()) System.out.println("Mẫu số phải khác không");
+        if(fr.kiemtra(fr.getB())) System.out.println("Mẫu số phải khác không");
         else {
             System.out.println("Tử số: " + fr.getA());
             System.out.println("Mẫu số: " + fr.getB());
             System.out.println("Phân số: " + fr.getA() + "/" +fr.getB());
-            fr.rutgon();
-            fr.nghichdao();
-            fr.add();
-            fr.sub();
-            fr.multi();
-            fr.div();
+            fr.rutgon(fr.getA(), fr.getB());
+            fr.nghichdao(fr.getA(),fr.getB());
+            fr.pso2();
         }
     }
 }
